@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.c9903e91.js",
+    "main.js": "/homepage/static/js/main.e8295a5c.js",
     "static/media/rotating-card-bg-front.jpeg": "/homepage/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg",
-    "static/media/homepage.png": "/homepage/static/media/homepage.dfdbbce2130aee877ae5.png",
     "static/media/macbook.png": "/homepage/static/media/macbook.e0a8c5d5cc02d71b6d86.png",
     "static/media/bg-coworking.jpeg": "/homepage/static/media/bg-coworking.06bccc47fe6ae5366bf8.jpeg",
-    "static/media/bg-sign-in-basic.jpeg": "/homepage/static/media/bg-sign-in-basic.f327db1d0e4b00ba3c81.jpeg",
     "static/media/city-profile.jpg": "/homepage/static/media/city-profile.4d64bba97c3d1757379e.jpg",
     "static/media/rotating-card-bg-back.jpeg": "/homepage/static/media/rotating-card-bg-back.183088de91adb283a9ae.jpeg",
     "static/media/blog-9-4.jpg": "/homepage/static/media/blog-9-4.de736e0b751f453415a5.jpg",
     "static/media/illustration-reset.jpg": "/homepage/static/media/illustration-reset.c5f36c0c2262b9ad6165.jpg",
     "static/media/waves-white.svg": "/homepage/static/media/waves-white.7e7579c6e93ead70064fb4e8dd899f32.svg",
     "static/media/blog2.jpg": "/homepage/static/media/blog2.aba7a3cb94805e9557d1.jpg",
+    "static/media/homepage.jpeg": "/homepage/static/media/homepage.2c43843cdd7f336dae21.jpeg",
     "static/media/bg-about-us.jpg": "/homepage/static/media/bg-about-us.cf9a123e2a3d371d53da.jpg",
     "static/media/testimonial-6-2.jpg": "/homepage/static/media/testimonial-6-2.21f2048f0b89919090f0.jpg",
     "static/media/testimonial-6-3.jpg": "/homepage/static/media/testimonial-6-3.d35bef0d65354442d063.jpg",
@@ -33,9 +32,9 @@
     "static/media/logo-nasa.svg": "/homepage/static/media/logo-nasa.c5d11f8820bfde5fd64db0074156e06c.svg",
     "static/media/logo-netflix.svg": "/homepage/static/media/logo-netflix.432ed6b5c31b9bcab9a38e32bf46a1e9.svg",
     "index.html": "/homepage/index.html",
-    "main.c9903e91.js.map": "/homepage/static/js/main.c9903e91.js.map"
+    "main.e8295a5c.js.map": "/homepage/static/js/main.e8295a5c.js.map"
   },
   "entrypoints": [
-    "static/js/main.c9903e91.js"
+    "static/js/main.e8295a5c.js"
   ]
 }
