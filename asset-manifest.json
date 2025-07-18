@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.2e1e1621.js",
+    "main.js": "/homepage/static/js/main.84b3666f.js",
     "static/media/rotating-card-bg-front.jpeg": "/homepage/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg",
+    "static/media/cpet-family.jpg": "/homepage/static/media/cpet-family.5ba447017d2529627f61.jpg",
     "static/media/macbook.png": "/homepage/static/media/macbook.e0a8c5d5cc02d71b6d86.png",
     "static/media/bg-coworking.jpeg": "/homepage/static/media/bg-coworking.06bccc47fe6ae5366bf8.jpeg",
     "static/media/bg-sign-in-basic.jpeg": "/homepage/static/media/bg-sign-in-basic.f327db1d0e4b00ba3c81.jpeg",
     "static/media/city-profile.jpg": "/homepage/static/media/city-profile.4d64bba97c3d1757379e.jpg",
-    "static/media/bg-presentation.jpg": "/homepage/static/media/bg-presentation.889630297390d27e8dfb.jpg",
     "static/media/rotating-card-bg-back.jpeg": "/homepage/static/media/rotating-card-bg-back.183088de91adb283a9ae.jpeg",
     "static/media/blog-9-4.jpg": "/homepage/static/media/blog-9-4.de736e0b751f453415a5.jpg",
     "static/media/illustration-reset.jpg": "/homepage/static/media/illustration-reset.c5f36c0c2262b9ad6165.jpg",
@@ -33,9 +33,9 @@
     "static/media/logo-nasa.svg": "/homepage/static/media/logo-nasa.c5d11f8820bfde5fd64db0074156e06c.svg",
     "static/media/logo-netflix.svg": "/homepage/static/media/logo-netflix.432ed6b5c31b9bcab9a38e32bf46a1e9.svg",
     "index.html": "/homepage/index.html",
-    "main.2e1e1621.js.map": "/homepage/static/js/main.2e1e1621.js.map"
+    "main.84b3666f.js.map": "/homepage/static/js/main.84b3666f.js.map"
   },
   "entrypoints": [
-    "static/js/main.2e1e1621.js"
+    "static/js/main.84b3666f.js"
   ]
 }
