@@ -27,15 +27,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Homepage page sections
-import Counters from "pages/Homepage/sections/Counters";
-import Information from "pages/Homepage/sections/Information";
 import DesignBlocks from "pages/Homepage/sections/DesignBlocks";
-import Pages from "pages/Homepage/sections/Pages";
-import Testimonials from "pages/Homepage/sections/Testimonials";
-import Download from "pages/Homepage/sections/Download";
-
-// Homepage page components
-import BuiltByDevelopers from "pages/Homepage/components/BuiltByDevelopers";
 
 // Routes
 import routes from "routes";
@@ -81,7 +73,7 @@ function Homepage() {
                 },
               })}
             >
-              CPET lab in Dongguk University{" "}
+              CPET lab in Dongguk University
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -107,15 +99,7 @@ function Homepage() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Counters />
-        <Information />
         <DesignBlocks />
-        <Pages />
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
-        <Testimonials />
-        <Download />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
