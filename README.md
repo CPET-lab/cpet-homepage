@@ -136,7 +136,7 @@ material-kit-2-react
     │   │   ├── pages
     │   │   │    ├── authentication
     │   │   │    ├── landing-pages
-    │   │   │    └── presentation
+    │   │   │    └── homepage
     │   │   ├── sections
     │   │   │    ├── attention-catchers
     │   │   │    ├── components
@@ -146,7 +146,7 @@ material-kit-2-react
     │   │   └──  └── page-sections
     │   ├── pages
     │   │   ├── LandingPages
-    │   │   └── Presentation
+    │   │   └── Homepage
     │   ├── App.js
     │   ├── index.js
     │   ├── footer.routes.js

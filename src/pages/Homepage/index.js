@@ -28,25 +28,25 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
-// Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+// Homepage page sections
+import Counters from "pages/Homepage/sections/Counters";
+import Information from "pages/Homepage/sections/Information";
+import DesignBlocks from "pages/Homepage/sections/DesignBlocks";
+import Pages from "pages/Homepage/sections/Pages";
+import Testimonials from "pages/Homepage/sections/Testimonials";
+import Download from "pages/Homepage/sections/Download";
 
-// Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
+// Homepage page components
+import BuiltByDevelopers from "pages/Homepage/components/BuiltByDevelopers";
 
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+import bgImage from "assets/images/homepage.jpeg";
 
-function Presentation() {
+function Homepage() {
   return (
     <>
       <DefaultNavbar
@@ -92,7 +92,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              신 정 훈
+              moon jeoun hoon
             </MKTypography>
           </Grid>
         </Container>
@@ -221,4 +221,4 @@ function Presentation() {
   );
 }
 
-export default Presentation;
+export default Homepage;
