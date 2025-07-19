@@ -551,7 +551,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "CPET Lab",
+  brand: "CPET Lab in Dongguk University",
   transparent: false,
   light: false,
   action: false,

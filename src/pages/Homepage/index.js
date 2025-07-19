@@ -73,7 +73,8 @@ function Homepage() {
                 },
               })}
             >
-              CPET lab in Dongguk University
+              Cryptographic · Privacy <br />
+              Engineering Laboratory
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -82,6 +83,7 @@ function Homepage() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
+              <br />
               We develop a variety of cryptographic schemes using <br />
               Fully Homomorphic Encryption (FHE)
             </MKTypography>
