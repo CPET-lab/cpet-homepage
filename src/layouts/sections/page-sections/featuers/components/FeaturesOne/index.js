@@ -22,20 +22,32 @@ import Stack from "@mui/material/Stack";
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import ProfessorImage from "assets/images/professor.png";
 
 function FeaturesOne() {
   return (
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={5}>
-            <MKTypography variant="h3" my={1}>
-              Read More About Us
+          <Grid item xs={12} lg={5} sx={{ mb: { xs: 0, lg: 0 } }}>
+            <MKBox
+              component="img"
+              src={ProfessorImage}
+              alt="Professor Preview"
+              width="60%"
+              sx={{ mb: 2, borderRadius: 2 }}
+            />
+            <MKTypography variant="h4" my={1}>
+              Dongwoo Kim
             </MKTypography>
-            <MKTypography variant="body2" color="text" mb={2}>
-              Pain is what we go through as we become older. We get insulted by others, lose trust
-              for those others. We get back stabbed by friends. It becomes harder for us to give
-              others a hand.
+            <MKTypography variant="body2" color="text" mb={1}>
+              - Assistant Professor
+            </MKTypography>
+            <MKTypography variant="body2" color="text" mb={1}>
+              - College of AI Convergence
+            </MKTypography>
+            <MKTypography variant="body2" color="text" mb={1}>
+              - Dongguk University
             </MKTypography>
             <MKTypography
               component="a"
@@ -59,7 +71,7 @@ function FeaturesOne() {
                 },
               }}
             >
-              More about us
+              More about info
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>

@@ -78,7 +78,7 @@ function DesignBlocks() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Introduction to the lab <br />
+            Lab Introduction <br />
             &nbsp;
           </MKTypography>
         </Grid>
