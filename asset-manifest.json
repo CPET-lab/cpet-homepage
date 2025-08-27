@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.144ad9cc.js",
+    "main.js": "/homepage/static/js/main.51dc02d7.js",
     "static/media/macbook.png": "/homepage/static/media/macbook.e0a8c5d5cc02d71b6d86.png",
     "static/media/bg-coworking.jpeg": "/homepage/static/media/bg-coworking.06bccc47fe6ae5366bf8.jpeg",
     "static/media/city-profile.jpg": "/homepage/static/media/city-profile.4d64bba97c3d1757379e.jpg",
@@ -9,6 +9,7 @@
     "static/media/blog2.jpg": "/homepage/static/media/blog2.aba7a3cb94805e9557d1.jpg",
     "static/media/homepage.jpeg": "/homepage/static/media/homepage.2c43843cdd7f336dae21.jpeg",
     "static/media/bg-about-us.jpg": "/homepage/static/media/bg-about-us.cf9a123e2a3d371d53da.jpg",
+    "static/media/professor.png": "/homepage/static/media/professor.26b67dcc0be8e54f406f.png",
     "static/media/testimonial-6-2.jpg": "/homepage/static/media/testimonial-6-2.21f2048f0b89919090f0.jpg",
     "static/media/testimonial-6-3.jpg": "/homepage/static/media/testimonial-6-3.d35bef0d65354442d063.jpg",
     "static/media/team-1.jpg": "/homepage/static/media/team-1.0fd36e0ee93dcfacdef8.jpg",
@@ -26,9 +27,9 @@
     "static/media/logo-nasa.svg": "/homepage/static/media/logo-nasa.c5d11f8820bfde5fd64db0074156e06c.svg",
     "static/media/logo-netflix.svg": "/homepage/static/media/logo-netflix.432ed6b5c31b9bcab9a38e32bf46a1e9.svg",
     "index.html": "/homepage/index.html",
-    "main.144ad9cc.js.map": "/homepage/static/js/main.144ad9cc.js.map"
+    "main.51dc02d7.js.map": "/homepage/static/js/main.51dc02d7.js.map"
   },
   "entrypoints": [
-    "static/js/main.144ad9cc.js"
+    "static/js/main.51dc02d7.js"
   ]
 }
