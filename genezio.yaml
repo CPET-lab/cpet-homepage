@@ -1,10 +1,10 @@
 frontend:
-    path: ./
-    publish: ./build
-    scripts:
-        build: npm run build
-        deploy: npm install
-    subdomain: CPET-lab
+  path: ./
+  publish: ./build
+  scripts:
+    build: npm run build
+    deploy: npm install
+  subdomain: CPET-lab
 name: CPET-lab
 region: us-east-1
 yamlVersion: 2

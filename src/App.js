@@ -13,9 +13,11 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useEffect } from "react";
+// src/App.js
 
+import { useEffect } from "react";
 // react-router components
+// Routes, Route, Navigate, useLocation는 그대로 둡니다.
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // @mui material components
@@ -32,7 +34,7 @@ import routes from "routes";
 export default function App() {
   const { pathname } = useLocation();
 
-  // Setting page scroll to 0 when changing the route
+  // 페이지 이동 시 스크롤을 맨 위로 올리는 기능은 그대로 둡니다.
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -56,8 +58,8 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/homepage" element={<Homepage />} />
-        <Route path="*" element={<Navigate to="/homepage" />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </ThemeProvider>
   );
