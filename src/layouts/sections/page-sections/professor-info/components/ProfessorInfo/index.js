@@ -2,53 +2,47 @@
 =========================================================
 * Material Kit 2 React - v2.1.0
 =========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* ... (copyright headers) ...
 */
 
-// @mui material components
+// ... (import 구문들은 그대로 둡니다)
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import Stack from "@mui/material/Stack";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import ProfessorImage from "assets/images/professor.png";
 
-function FeaturesOne() {
+function Professor() {
   return (
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
-        <Grid container alignItems="center">
-          <Grid item xs={12} lg={5} sx={{ mb: { xs: 0, lg: 0 }, textAlign: "center" }}>
+        {/* ======== [수정 1] alignItems="center"를 "flex-start"로 변경 ======== */}
+        <Grid container alignItems="flex-start" justifyContent="space-between">
+          {/* --- 교수님 정보 컬럼 (왼쪽) --- */}
+          <Grid item xs={12} lg={5} sx={{ textAlign: "center" }}>
             <MKBox
               component="img"
               src={ProfessorImage}
               alt="Professor Preview"
               width="60%"
-              sx={{ mb: 2, borderRadius: 2 }}
+              sx={{ mb: 2, borderRadius: 2, mx: "auto" }}
             />
             <MKTypography variant="h4" my={1} sx={{ pb: 2 }}>
               Dongwoo Kim
             </MKTypography>
-            <MKTypography variant="body2" color="text" mb={1}>
-              Assistant Professor
-            </MKTypography>
-            <MKTypography variant="body2" color="text" mb={1}>
-              College of AI Convergence
-            </MKTypography>
-            <MKTypography variant="body2" color="text" mb={1} sx={{ pb: 2 }}>
-              Dongguk University
-            </MKTypography>
+            <MKBox sx={{ display: "inline-block", textAlign: "left" }}>
+              <MKTypography variant="body2" color="text" mb={1}>
+                Assistant Professor
+              </MKTypography>
+              <MKTypography variant="body2" color="text" mb={1}>
+                College of AI Convergence
+              </MKTypography>
+              <MKTypography variant="body2" color="text" mb={1} sx={{ pb: 2 }}>
+                Dongguk University
+              </MKTypography>
+            </MKBox>
             <MKTypography
               component="a"
               href="https://dwkim606.github.io/"
@@ -57,8 +51,9 @@ function FeaturesOne() {
               fontWeight="regular"
               sx={{
                 width: "max-content",
-                // display: "flex",
+                display: "flex",
                 alignItems: "center",
+                mx: "auto",
                 "& .material-icons-round": {
                   fontSize: "1.125rem",
                   transform: "translateX(3px)",
@@ -74,8 +69,21 @@ function FeaturesOne() {
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
-          <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+
+          {/* --- 논문 목록 컬럼 (오른쪽) --- */}
+          {/* ======== [수정 2] sx 속성에 maxHeight와 overflowY 추가 ======== */}
+          <Grid
+            item
+            xs={12}
+            lg={6}
+            sx={{
+              mt: { xs: 6, lg: 0 },
+              maxHeight: "500px", // 이 값을 조절하여 스크롤이 시작되는 최대 높이를 설정합니다.
+              overflowY: "auto", // 내용이 maxHeight를 넘으면 자동으로 수직 스크롤바가 생깁니다.
+            }}
+          >
             <Stack>
+              {/* ... (논문 목록 내용은 그대로 둡니다) ... */}
               <MKBox display="flex" alignItems="center" p={2}>
                 <MKBox
                   width="3rem"
@@ -89,12 +97,12 @@ function FeaturesOne() {
                   justifyContent="center"
                   borderRadius="xl"
                 >
-                  <Icon fontSize="small">mediation</Icon>
+                  <Icon fontSize="small">article</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  It becomes harder for us to give others a hand.
+                  논문1
                   <br />
-                  We get our heart broken by people we love.
+                  논문11
                 </MKTypography>
               </MKBox>
               <MKBox display="flex" alignItems="center" p={2}>
@@ -110,12 +118,12 @@ function FeaturesOne() {
                   justifyContent="center"
                   borderRadius="xl"
                 >
-                  <Icon fontSize="small">settings_overscan</Icon>
+                  <Icon fontSize="small">article</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  As we live, our hearts turn colder.
+                  논문2
                   <br />
-                  Cause pain is what we go through as we become older.
+                  논문22
                 </MKTypography>
               </MKBox>
               <MKBox display="flex" alignItems="center" p={2}>
@@ -131,12 +139,180 @@ function FeaturesOne() {
                   justifyContent="center"
                   borderRadius="xl"
                 >
-                  <Icon fontSize="small">token</Icon>
+                  <Icon fontSize="small">article</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  When we lose family over time.
+                  논문3
                   <br />
-                  What else could rust the heart more over time? Blackgold.
+                  논문33
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문4
+                  <br />
+                  논문44
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문5
+                  <br />
+                  논문55
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">article</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  논문6
+                  <br />
+                  논문66
                 </MKTypography>
               </MKBox>
             </Stack>
@@ -147,4 +323,4 @@ function FeaturesOne() {
   );
 }
 
-export default FeaturesOne;
+export default Professor;

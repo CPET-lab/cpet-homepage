@@ -66,6 +66,9 @@ import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 
+// 1. Members 페이지를 import 합니다.
+import Members from "layouts/pages/landing-pages/members"; // 경로를 확인해주세요. 아마 layouts/pages/landing-pages/members/index.js 가 될 것입니다.
+
 const routes = [
   {
     name: "Pages",
@@ -214,6 +217,12 @@ const routes = [
         ],
       },
     ],
+  },
+  {
+    name: "Members", // 메뉴에 표시될 이름
+    icon: <Icon>people</Icon>, // 메뉴 아이콘
+    route: "/pages/landing-pages/members", // 페이지 경로
+    component: <Members />, // 연결할 컴포넌트
   },
   {
     name: "github",

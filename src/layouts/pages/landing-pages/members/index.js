@@ -18,19 +18,19 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Features page components
-import Professor from "layouts/sections/page-sections/professor-info/components/ProfessorInfo";
+import Members from "layouts/pages/landing-pages/members/components/index.js";
 
 function ProfessorInfo() {
   return (
     <BaseLayout
-      title="Professor Info"
+      title="Members Info"
       breadcrumb={[
-        { label: "Professor", route: "/sections/page-sections/professor-info" },
-        { label: "Professor Info" },
+        { label: "Members", route: "/sections/page-sections/members" },
+        { label: "Members Info" },
       ]}
     >
       <View title=" ">
-        <Professor />
+        <Members />
       </View>
     </BaseLayout>
   );
