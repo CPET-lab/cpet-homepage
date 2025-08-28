@@ -48,8 +48,7 @@ import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 
 // Sections
-import PageHeaders from "layouts/sections/page-sections/page-headers";
-import Features from "layouts/sections/page-sections/featuers";
+import Professor from "layouts/sections/page-sections/professor-info";
 import Navbars from "layouts/sections/navigation/navbars";
 import NavTabs from "layouts/sections/navigation/nav-tabs";
 import Pagination from "layouts/sections/navigation/pagination";
@@ -73,21 +72,10 @@ const routes = [
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
-        name: "page sections",
-        description: "See all sections",
-        dropdown: true,
-        collapse: [
-          {
-            name: "page headers",
-            route: "/sections/page-sections/page-headers",
-            component: <PageHeaders />,
-          },
-          {
-            name: "features",
-            route: "/sections/page-sections/features",
-            component: <Features />,
-          },
-        ],
+        name: "professor",
+        description: "#####info",
+        route: "/sections/page-sections/professor-info",
+        component: <Professor />,
       },
       {
         name: "navigation",

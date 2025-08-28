@@ -18,25 +18,22 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Features page components
-import FeaturesOne from "layouts/sections/page-sections/featuers/components/FeaturesOne";
+import Professor from "layouts/sections/page-sections/professor-info/components/ProfessorInfo";
 
-// Features page components code
-import featuresOneCode from "layouts/sections/page-sections/featuers/components/FeaturesOne/code";
-
-function Features() {
+function ProfessorInfo() {
   return (
     <BaseLayout
-      title="Features"
+      title="Professor Info"
       breadcrumb={[
-        { label: "Page Sections", route: "/sections/page-sections/features" },
-        { label: "Features" },
+        { label: "Professor", route: "/sections/page-sections/professor-info" },
+        { label: "Info" },
       ]}
     >
-      <View title="Features 1" code={featuresOneCode}>
-        <FeaturesOne />
+      <View title="Info">
+        <Professor />
       </View>
     </BaseLayout>
   );
 }
 
-export default Features;
+export default ProfessorInfo;

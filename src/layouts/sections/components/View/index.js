@@ -89,19 +89,7 @@ function View({ children, code, title, height, ...rest }) {
                       className="fas fa-desktop"
                     />
                   }
-                  label="Preview"
-                />
-                <Tab
-                  icon={
-                    <MKBox
-                      component="i"
-                      color="dark"
-                      mr={1.25}
-                      sx={{ fontSize: ({ typography: { size } }) => size.sm }}
-                      className="fas fa-code"
-                    />
-                  }
-                  label="Code"
+                  label="CPET Lab"
                 />
               </Tabs>
             </AppBar>
