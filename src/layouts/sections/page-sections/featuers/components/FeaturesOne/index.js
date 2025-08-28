@@ -29,7 +29,7 @@ function FeaturesOne() {
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={5} sx={{ mb: { xs: 0, lg: 0 } }}>
+          <Grid item xs={12} lg={5} sx={{ mb: { xs: 0, lg: 0 }, textAlign: "center" }}>
             <MKBox
               component="img"
               src={ProfessorImage}
@@ -37,29 +37,28 @@ function FeaturesOne() {
               width="60%"
               sx={{ mb: 2, borderRadius: 2 }}
             />
-            <MKTypography variant="h4" my={1}>
+            <MKTypography variant="h4" my={1} sx={{ pb: 2 }}>
               Dongwoo Kim
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={1}>
-              - Assistant Professor
+              Assistant Professor
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={1}>
-              - College of AI Convergence
+              College of AI Convergence
             </MKTypography>
-            <MKTypography variant="body2" color="text" mb={1}>
-              - Dongguk University
+            <MKTypography variant="body2" color="text" mb={1} sx={{ pb: 2 }}>
+              Dongguk University
             </MKTypography>
             <MKTypography
               component="a"
-              href="#"
+              href="https://dwkim606.github.io/"
               variant="body2"
               color="info"
               fontWeight="regular"
               sx={{
                 width: "max-content",
-                display: "flex",
+                // display: "flex",
                 alignItems: "center",
-
                 "& .material-icons-round": {
                   fontSize: "1.125rem",
                   transform: "translateX(3px)",
