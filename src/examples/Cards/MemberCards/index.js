@@ -1,7 +1,5 @@
-// prop-types는 컴포넌트가 받는 데이터의 타입을 검증해주는 라이브러리입니다.
 import PropTypes from "prop-types";
 
-// Material Kit 2 React의 기본 구성 요소들을 가져옵니다.
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
@@ -9,12 +7,9 @@ import Stack from "@mui/material/Stack";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// 학생 정보를 표시할 카드 컴포넌트 함수입니다.
-// image, name, position, publications 등의 정보를 props로 받습니다.
 function MemberCard({ image, name, position, publications }) {
-  // 논문 목록을 화면에 렌더링하는 부분입니다.
   const renderPublications = publications.map(({ title, description }) => (
-    <MKBox key={title} display="flex" alignItems="center" p={1}>
+    <MKBox key={title} display="flex" alignItems="center" p={1} sx={{ pb: 3 }}>
       <MKBox
         width="2rem"
         height="2rem"
@@ -27,7 +22,7 @@ function MemberCard({ image, name, position, publications }) {
         justifyContent="center"
         borderRadius="lg"
       >
-        <Icon fontSize="small">article</Icon> {/* 아이콘을 논문 모양으로 변경 */}
+        <Icon fontSize="small">article</Icon>
       </MKBox>
       <MKTypography variant="body2" color="text" pl={2}>
         <strong>{title}</strong>
@@ -56,10 +51,10 @@ function MemberCard({ image, name, position, publications }) {
             </MKTypography>
             <MKBox sx={{ display: "inline-block", textAlign: "left" }}>
               <MKTypography variant="body2" color="text" mb={1}>
-                {position.course}
+                <strong>{position.course}</strong>
               </MKTypography>
               <MKTypography variant="body2" color="text" mb={1}>
-                {position.interest}
+                <strong>{position.interest}</strong>
               </MKTypography>
             </MKBox>
           </Grid>

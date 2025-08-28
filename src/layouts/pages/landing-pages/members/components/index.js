@@ -1,57 +1,118 @@
 // 학생들의 데이터를 여기에 정리합니다.
 // 사진은 `src/assets/images/team` 폴더에 넣고 경로를 맞추는 것을 추천합니다.
-import MemberImage1 from "assets/images/team-1.jpg";
-import MemberImage2 from "assets/images/team-2.jpg";
-
+import JungHoonMoonImage from "assets/images/junghun_moon.png";
+import MingiKimImage from "assets/images/mingikim.png";
+import DefaultImage from "assets/images/anonymous.png";
 import Container from "@mui/material/Container";
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 
 import MemberCard from "examples/Cards/MemberCards";
 
 const membersData = [
   {
-    image: MemberImage1,
-    name: "홍길동",
+    image: JungHoonMoonImage,
+    name: "Jung Hun, Moon",
     position: {
-      course: "석사 과정",
-      interest: "관심 연구분야: Fuzzy PSI",
+      course: "Master's student",
+      interest: "Research Field: FHE, Secure Pattern Matching, Bootstrapping, Fuzzy PSI",
     },
     publications: [
       {
-        title: "논문 제목 1",
-        description: "저널 또는 학회 이름, 2024",
-      },
-      {
-        title: "논문 제목 2",
-        description: "저널 또는 학회 이름, 2023",
+        title: "동형암호를 활용한 비이진 데이터에 대한 안전한 패턴 매칭 (2025)",
+        description: "문정훈, 김동우*",
       },
     ],
   },
   {
-    image: MemberImage2,
-    name: "이순신",
+    image: DefaultImage,
+    name: "Jun Hyuk, Kim",
     position: {
-      course: "박사 과정",
-      interest: "관심 연구분야: ZK-SNARKs",
+      course: "Master's student",
+      interest: "Research Field: Fully Homomorphic Encryption",
     },
     publications: [
       {
-        title: "다른 논문 제목 1",
-        description: "다른 학회 이름, 2024",
+        title: "논문 작성 중",
+        description: " ",
       },
     ],
   },
-  // 여기에 다른 학생 정보를 추가하면 됩니다.
+  {
+    image: MingiKimImage,
+    name: "Min Gi, Kim",
+    position: {
+      course: "Master's student",
+      interest: "Research Field: FHE, ZK-SNARKs, Fuzzy PSI",
+    },
+    publications: [
+      {
+        title: "논문 작성 중",
+        description: " ",
+      },
+    ],
+  },
+  {
+    image: DefaultImage,
+    name: "Ju Hyuk, Choi",
+    position: {
+      course: "Master's student",
+      interest: "Research Field: Fully Homomorphic Encryption",
+    },
+    publications: [
+      {
+        title: "논문 작성 중",
+        description: " ",
+      },
+    ],
+  },
+  {
+    image: DefaultImage,
+    name: "Jibin, Park",
+    position: {
+      course: "Bachelor's student",
+      interest: "Research Field: Fully Homomorphic Encryption",
+    },
+    publications: [
+      {
+        title: "논문 작성 중",
+        description: " ",
+      },
+    ],
+  },
+  {
+    image: DefaultImage,
+    name: "Jeong Bin, Lee",
+    position: {
+      course: "Bachelor's student",
+      interest: "Research Field: Fully Homomorphic Encryption",
+    },
+    publications: [
+      {
+        title: "논문 작성 중",
+        description: " ",
+      },
+    ],
+  },
+  {
+    image: DefaultImage,
+    name: "Young Ho, Joung",
+    position: {
+      course: "Bachelor's student",
+      interest: "Research Field: Fully Homomorphic Encryption",
+    },
+    publications: [
+      {
+        title: "논문 작성 중",
+        description: " ",
+      },
+    ],
+  },
 ];
 
 function Members() {
   return (
-    <MKBox>
+    <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
-        <MKTypography variant="h2" textAlign="center" my={4}>
-          연구실 구성원
-        </MKTypography>
         {/* membersData 배열을 순회하며 각 학생에 대한 MemberCard를 생성합니다. */}
         {membersData.map((member) => (
           <MemberCard
