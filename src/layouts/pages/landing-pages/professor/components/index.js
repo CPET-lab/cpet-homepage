@@ -46,6 +46,8 @@ function Professor() {
             <MKTypography
               component="a"
               href="https://dwkim606.github.io/"
+              target="_blank"
+              rel="noreferrer"
               variant="body2"
               color="info"
               fontWeight="regular"
