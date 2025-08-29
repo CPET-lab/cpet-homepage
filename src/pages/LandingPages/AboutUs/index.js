@@ -47,7 +47,7 @@ function AboutUs() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://github.com/CPET-lab",
+          route: "https://open.kakao.com/o/sJxC25Oh",
           label: "CONTACT US",
           color: "default",
         }}
