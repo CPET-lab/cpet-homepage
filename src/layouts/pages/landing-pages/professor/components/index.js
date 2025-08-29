@@ -69,21 +69,17 @@ function Professor() {
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
-
-          {/* --- 논문 목록 컬럼 (오른쪽) --- */}
-          {/* ======== [수정 2] sx 속성에 maxHeight와 overflowY 추가 ======== */}
           <Grid
             item
             xs={12}
             lg={6}
             sx={{
               mt: { xs: 6, lg: 0 },
-              maxHeight: "500px", // 이 값을 조절하여 스크롤이 시작되는 최대 높이를 설정합니다.
-              overflowY: "auto", // 내용이 maxHeight를 넘으면 자동으로 수직 스크롤바가 생깁니다.
+              maxHeight: "500px", // 이 값을 조절하여 스크롤이 시작되는 최대 높이를 설정
+              overflowY: "auto", // 내용이 maxHeight를 넘으면 자동으로 수직 스크롤바 생성
             }}
           >
             <Stack>
-              {/* ... (논문 목록 내용은 그대로 둡니다) ... */}
               <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
                 <MKBox
                   width="3rem"
@@ -99,12 +95,25 @@ function Professor() {
                 >
                   <Icon fontSize="small">article</Icon>
                 </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  <strong>논문1</strong>
+                <MKTypography
+                  variant="body2"
+                  color="text"
+                  pl={2}
+                  component="a"
+                  href="https://rd.springer.com/chapter/10.1007/978-3-030-84245-1_15"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <strong>
+                    MHz2k: MPC from HE over ℤ₂ᴷ with New Packing, Simpler Reshare,
+                    <br />
+                    and Better ZKP (CRYPTO 2021)
+                  </strong>
                   <br />
-                  논문11
+                  Jung Hee Cheon, Dongwoo Kim, Keewoo Lee
                 </MKTypography>
               </MKBox>
+
               <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
                 <MKBox
                   width="3rem"
@@ -120,12 +129,27 @@ function Professor() {
                 >
                   <Icon fontSize="small">article</Icon>
                 </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  <strong>논문2</strong>
+                <MKTypography
+                  variant="body2"
+                  color="text"
+                  pl={2}
+                  component="a"
+                  href="https://link.springer.com/chapter/10.1007/978-3-030-90567-5_33"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <strong>
+                    Lattice-based Secure Biometric Authentication for
+                    <br />
+                    Hamming Distance (ACISP 2021)
+                  </strong>
                   <br />
-                  논문22
+                  Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Joohee Lee,
+                  <br />
+                  Junbum Shin, Yongsoo Song
                 </MKTypography>
               </MKBox>
+
               <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
                 <MKBox
                   width="3rem"
@@ -141,10 +165,24 @@ function Professor() {
                 >
                   <Icon fontSize="small">article</Icon>
                 </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  <strong>논문3</strong>
+                <MKTypography
+                  variant="body2"
+                  color="text"
+                  pl={2}
+                  component="a"
+                  href="https://rd.springer.com/chapter/10.1007%2F978-3-030-75248-4_19"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <strong>
+                    Flexible and Efficient Verifiable Computation on
+                    <br />
+                    Encrypted Data (PKC 2021)
+                  </strong>
                   <br />
-                  논문33
+                  Alexandre Bois, Ignacio Cascudo, Dario Fiore,
+                  <br />
+                  Dongwoo Kim
                 </MKTypography>
               </MKBox>
             </Stack>
