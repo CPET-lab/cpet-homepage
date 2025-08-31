@@ -1,5 +1,18 @@
-// 학생들의 데이터를 여기에 정리합니다.
-// 사진은 `src/assets/images/team` 폴더에 넣고 경로를 맞추는 것을 추천합니다.
+/*
+=========================================================
+* Material Kit 2 React - v2.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
 import JungHoonMoonImage from "assets/images/junghun_moon.png";
 import MingiKimImage from "assets/images/mingikim.png";
 import DefaultImage from "assets/images/anonymous.png";
@@ -14,7 +27,7 @@ const membersData = [
     name: "Jung Hun, Moon",
     position: {
       course: "Master's student",
-      interest: "Research Field: FHE, Secure Pattern Matching, Bootstrapping, Fuzzy PSI",
+      interest: "Research Interests: FHE, Secure Pattern Matching, Bootstrapping, Fuzzy PSI",
     },
     publications: [
       {
@@ -28,7 +41,7 @@ const membersData = [
     name: "Jun Hyuk, Kim",
     position: {
       course: "Master's student",
-      interest: "Research Field: Fully Homomorphic Encryption",
+      interest: "Research Interests: Fully Homomorphic Encryption",
     },
     publications: [
       {
@@ -42,7 +55,7 @@ const membersData = [
     name: "Min Gi, Kim",
     position: {
       course: "Master's student",
-      interest: "Research Field: FHE, ZK-SNARKs, Fuzzy PSI",
+      interest: "Research Interests: FHE, ZK-SNARKs, Fuzzy PSI",
     },
     publications: [
       {
@@ -56,7 +69,7 @@ const membersData = [
     name: "Ju Hyuk, Choi",
     position: {
       course: "Master's student",
-      interest: "Research Field: Fully Homomorphic Encryption",
+      interest: "Research Interests: Fully Homomorphic Encryption",
     },
     publications: [
       {
@@ -70,7 +83,7 @@ const membersData = [
     name: "Jibin, Park",
     position: {
       course: "Bachelor's student",
-      interest: "Research Field: Fully Homomorphic Encryption",
+      interest: "Research Interests: Fully Homomorphic Encryption",
     },
     publications: [
       {
@@ -84,7 +97,7 @@ const membersData = [
     name: "Jeong Bin, Lee",
     position: {
       course: "Bachelor's student",
-      interest: "Research Field: Fully Homomorphic Encryption",
+      interest: "Research Interests: Fully Homomorphic Encryption",
     },
     publications: [
       {
@@ -98,7 +111,7 @@ const membersData = [
     name: "Young Ho, Joung",
     position: {
       course: "Bachelor's student",
-      interest: "Research Field: Fully Homomorphic Encryption",
+      interest: "Research Interests: Fully Homomorphic Encryption",
     },
     publications: [
       {
@@ -113,7 +126,7 @@ function Members() {
   return (
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
-        {/* membersData 배열을 순회하며 각 학생에 대한 MemberCard를 생성합니다. */}
+        {/* membersData 배열을 순회하며 각 학생에 대한 MemberCard를 생성. */}
         {membersData.map((member) => (
           <MemberCard
             key={member.name}

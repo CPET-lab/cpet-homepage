@@ -44,13 +44,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 import Professor from "layouts/pages/landing-pages/professor";
 
-// 1. Members 페이지를 import 합니다.
 import Members from "layouts/pages/landing-pages/members";
+
+import FHE from "layouts/pages/landing-pages/field-of-study/FHE";
 
 const routes = [
   {
     name: "professor",
-    icon: <Icon>book</Icon>,
+    icon: <Icon>portrait</Icon>,
     route: "/pages/landing-pages/professor-info",
     component: <Professor />,
   },
@@ -59,6 +60,19 @@ const routes = [
     icon: <Icon>people</Icon>, // 메뉴 아이콘
     route: "/pages/landing-pages/members", // 페이지 경로
     component: <Members />, // 연결할 컴포넌트
+  },
+  {
+    name: "Field of study",
+    icon: <Icon>book</Icon>,
+    description: "...",
+    dropdown: true,
+    collapse: [
+      {
+        name: "Fully Homomorphic Encryption", // 메뉴에 표시될 이름
+        route: "/pages/landing-pages/field-of-study/FHE", // 페이지 경로
+        component: <FHE />, // 연결할 컴포넌트
+      },
+    ],
   },
   {
     name: "github",

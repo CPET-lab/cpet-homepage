@@ -29,7 +29,8 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       bgColor="white"
       borderRadius="xl"
       shadow="lg"
-      minHeight="10rem"
+      // ======== [수정 1] minHeight을 고정된 값으로 변경하여 모든 카드의 최소 높이를 통일 ========
+      minHeight="12rem" // 이 값을 조절하여 원하는 높이로 설정할 수 있음
       sx={{
         overflow: "hidden",
         transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
@@ -49,7 +50,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
           <svg
             width="24px"
             height="24px"
-            viewBox="0 0 24 24"
+            viewBox="0 0 24"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -73,6 +74,9 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         src={image}
         alt={name}
         width="100%"
+        // ======== [수정 2] 이미지 자체에도 높이와 objectFit 속성을 추가========
+        height="100%" // 부모 MKBox의 높이를 100% 채웁니다.
+        sx={{ objectFit: "cover" }} // 이미지가 비율을 유지하면서 주어진 공간을 가득 채우도록 합니다.
         my="auto"
         opacity={pro ? 0.6 : 1}
       />

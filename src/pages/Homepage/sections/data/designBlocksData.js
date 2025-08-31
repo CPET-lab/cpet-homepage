@@ -25,7 +25,7 @@ export default [
       {
         image: FHEImage,
         name: "Fully Homomorphic Encryption",
-        route: "layouts/pages/landing-pages/field-of-study/FHE/index.js",
+        route: "/pages/landing-pages/field-of-study/FHE",
       },
       {
         image: FuzzyPSIImage,

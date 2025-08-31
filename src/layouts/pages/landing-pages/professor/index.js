@@ -25,7 +25,7 @@ function ProfessorInfo() {
     <BaseLayout
       title="Professor Info"
       breadcrumb={[
-        { label: "Professor", route: "/sections/page-sections/professor" },
+        { label: "Home", route: "/sections/page-sections/professor" },
         { label: "Professor Info" },
       ]}
     >

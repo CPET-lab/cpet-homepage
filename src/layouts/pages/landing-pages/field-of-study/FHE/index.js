@@ -18,22 +18,23 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Features page components
-import Members from "layouts/pages/landing-pages/members/components/index.js";
+import FHE from "layouts/pages/landing-pages/field-of-study/FHE/components/index.js";
 
-function MemberInfo() {
+function FHEInfo() {
   return (
     <BaseLayout
-      title="Members Info"
+      title="Fully Homomorphic Encryption"
       breadcrumb={[
-        { label: "Home", route: "/sections/page-sections/members" },
-        { label: "Members Info" },
+        { label: "Home", route: "/sections/page-sections/field-of-study" },
+        { label: "Field of Study", route: "/sections/page-sections/field-of-study" },
+        { label: "FHE" },
       ]}
     >
       <View title=" ">
-        <Members />
+        <FHE />
       </View>
     </BaseLayout>
   );
 }
 
-export default MemberInfo;
+export default FHEInfo;
