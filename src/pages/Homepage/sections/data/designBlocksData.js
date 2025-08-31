@@ -14,33 +14,32 @@ Coded by www.creative-tim.com
 */
 
 import testImage from "assets/images/macbook.png";
+import FHEImage from "assets/images/FHE.png";
+import FuzzyPSIImage from "assets/images/FuzzyPSI.png";
+
 export default [
   {
     title: "Fields of study",
     description: "FHE, Fuzzy PSI, ZKP, ZK_SNARKs, etc.",
     items: [
       {
-        image: testImage,
+        image: FHEImage,
         name: "Fully Homomorphic Encryption",
-        count: 10,
-        route: "/sections/page-sections/page-headers",
+        route: "layouts/pages/landing-pages/field-of-study/FHE/index.js",
       },
       {
-        image: testImage,
+        image: FuzzyPSIImage,
         name: "Fuzzy PSI",
-        count: 14,
         route: "/sections/page-sections/features",
       },
       {
         image: testImage,
         name: "Zero Knowledge Proofs",
-        count: 8,
         route: "/sections/page-sections/page-headers",
       },
       {
         image: testImage,
         name: "ZK_SNARKs",
-        count: 1,
         route: "/sections/page-sections/page-headers",
       },
     ],
