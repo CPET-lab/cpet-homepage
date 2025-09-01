@@ -23,8 +23,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
+import DefaultNavbar from "templates/Navbars/DefaultNavbar";
+import DefaultFooter from "templates/Footers/DefaultFooter";
 
 // Homepage page sections
 import DesignBlocks from "pages/Homepage/sections/DesignBlocks";
