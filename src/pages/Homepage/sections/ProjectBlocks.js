@@ -12,23 +12,12 @@ import MKTypography from "components/MKTypography";
 import ProjectItem from "pages/Homepage/components/ProjectItem";
 
 // Data
-import data from "pages/Homepage/sections/data/designBlocksData";
+import data from "pages/Homepage/sections/data/projectData";
 
-function DesignBlocks() {
-  const renderData = data.map(({ title, description, items }) => (
-    <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
-      <Grid item xs={12} lg={3}>
-        <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
-          <MKTypography variant="h3" fontWeight="bold" mb={1}>
-            {title}
-          </MKTypography>
-          <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
-            {description}
-          </MKTypography>
-        </MKBox>
-      </Grid>
+function ProjectBlocks() {
+  const renderData = data.map(({ items }) => (
+    <Grid container spacing={3} sx={{ mb: 10 }} key={items} justifyContent="center">
       <Grid item xs={12} lg={9}>
-        {/* ======== [수정] 아래 Stack에 sx 속성을 추가하여 스크롤 기능을 구현 ======== */}
         <Stack
           spacing={2}
           sx={{
@@ -37,8 +26,8 @@ function DesignBlocks() {
             pr: 2, // 스크롤바가 생길 때 내용과 겹치지 않도록 오른쪽에 약간의 여백을 줌
           }}
         >
-          {items.map(({ icon, name, route }) => (
-            <ProjectItem key={name} icon={icon} title={name} route={route} />
+          {items.map(({ icon, title, name }) => (
+            <ProjectItem key={name} icon={icon} title={title} name={name} />
           ))}
         </Stack>
       </Grid>
@@ -74,4 +63,4 @@ function DesignBlocks() {
   );
 }
 
-export default DesignBlocks;
+export default ProjectBlocks;

@@ -24,10 +24,7 @@ function CPETProjectsInfo() {
   return (
     <BaseLayout
       title="Projects"
-      breadcrumb={[
-        { label: "Home", route: "/sections/page-sections/field-of-study" },
-        { label: "Projects" },
-      ]}
+      breadcrumb={[{ label: "Home", route: "/page/sections" }, { label: "Projects" }]}
     >
       <View title=" ">
         <CPETProjects />

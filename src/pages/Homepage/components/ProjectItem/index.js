@@ -4,11 +4,10 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function NoticeItem({ icon, title, route }) {
+function ProjectItem({ icon, title, name }) {
   return (
     <MKBox
       component={Link}
-      to={route}
       display="flex"
       alignItems="center"
       p={2}
@@ -35,22 +34,28 @@ function NoticeItem({ icon, title, route }) {
       >
         <Icon fontSize="small">{icon.name}</Icon>
       </MKBox>
-      <MKTypography variant="h6" fontWeight="regular" sx={{ ml: 2 }}>
-        {title}
+      <MKTypography variant="body2" color="text" pl={2}>
+        <strong>
+          {title.split("<br />").map((line, index, arr) => (
+            <span key={line}>
+              {line}
+              {index < arr.length - 1 && <br />}
+            </span>
+          ))}
+        </strong>
+        <br />
+        {name}
       </MKTypography>
-      <Icon sx={{ ml: "auto", color: ({ palette: { text } }) => text.secondary }}>
-        chevron_right
-      </Icon>
     </MKBox>
   );
 }
 
-NoticeItem.propTypes = {
+ProjectItem.propTypes = {
   icon: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
   title: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
-export default NoticeItem;
+export default ProjectItem;

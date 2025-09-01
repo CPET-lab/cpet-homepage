@@ -27,7 +27,7 @@ import DefaultNavbar from "template/Navbars/DefaultNavbar";
 import DefaultFooter from "template/Footers/DefaultFooter";
 
 // Homepage page sections
-import DesignBlocks from "pages/Homepage/sections/DesignBlocks";
+import ProjectBlocks from "pages/Homepage/sections/ProjectBlocks";
 
 // Routes
 import routes from "routes";
@@ -101,7 +101,7 @@ function Homepage() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <DesignBlocks />
+        <ProjectBlocks />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
