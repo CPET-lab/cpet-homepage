@@ -25,9 +25,9 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
-import DefaultNavbar from "templates/Navbars/DefaultNavbar";
-import CenteredFooter from "templates/Footers/CenteredFooter";
-import Breadcrumbs from "templates/Breadcrumbs";
+import DefaultNavbar from "template/Navbars/DefaultNavbar";
+import CenteredFooter from "template/Footers/CenteredFooter";
+import Breadcrumbs from "template/Breadcrumbs";
 
 // Routes
 import routes from "routes";

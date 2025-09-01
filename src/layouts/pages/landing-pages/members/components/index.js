@@ -23,7 +23,7 @@ import DefaultImage from "assets/images/anonymous.png";
 import Container from "@mui/material/Container";
 import MKBox from "components/MKBox";
 
-import MemberCard from "templates/Cards/MemberCards";
+import MemberCard from "template/Cards/MemberCards";
 
 const membersData = [
   {
