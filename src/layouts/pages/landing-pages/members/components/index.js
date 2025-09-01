@@ -15,7 +15,11 @@ Coded by www.creative-tim.com
 
 import JungHoonMoonImage from "assets/images/junghun_moon.png";
 import MingiKimImage from "assets/images/mingikim.png";
+import JuHyeokImage from "assets/images/ju-hyeok-choi.jpeg";
+import JeongBinImage from "assets/images/jungbin.jpeg";
+import YeongHoImage from "assets/images/young-ho.jpeg";
 import DefaultImage from "assets/images/anonymous.png";
+
 import Container from "@mui/material/Container";
 import MKBox from "components/MKBox";
 
@@ -65,8 +69,8 @@ const membersData = [
     ],
   },
   {
-    image: DefaultImage,
-    name: "Ju Hyuk, Choi",
+    image: JuHyeokImage,
+    name: "Ju Hyeok, Choi",
     position: {
       course: "Master's student",
       interest: "Research Interests: Fully Homomorphic Encryption",
@@ -93,7 +97,7 @@ const membersData = [
     ],
   },
   {
-    image: DefaultImage,
+    image: JeongBinImage,
     name: "Jeong Bin, Lee",
     position: {
       course: "Bachelor's student",
@@ -107,7 +111,7 @@ const membersData = [
     ],
   },
   {
-    image: DefaultImage,
+    image: YeongHoImage,
     name: "Young Ho, Joung",
     position: {
       course: "Bachelor's student",
