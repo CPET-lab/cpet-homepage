@@ -18,23 +18,22 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Features page components
-import FHE from "layouts/pages/landing-pages/field-of-study/FHE/components/index.js";
+import CPETProjects from "layouts/pages/landing-pages/cpet-projects/components/index.js";
 
-function FHEInfo() {
+function CPETProjectsInfo() {
   return (
     <BaseLayout
-      title="Fully Homomorphic Encryption"
+      title="Projects"
       breadcrumb={[
         { label: "Home", route: "/sections/page-sections/field-of-study" },
-        { label: "Field of Study", route: "/sections/page-sections/field-of-study" },
-        { label: "FHE" },
+        { label: "Projects" },
       ]}
     >
       <View title=" ">
-        <FHE />
+        <CPETProjects />
       </View>
     </BaseLayout>
   );
 }
 
-export default FHEInfo;
+export default CPETProjectsInfo;

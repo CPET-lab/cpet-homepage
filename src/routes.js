@@ -46,7 +46,7 @@ import Professor from "layouts/pages/landing-pages/professor";
 
 import Members from "layouts/pages/landing-pages/members";
 
-import FHE from "layouts/pages/landing-pages/field-of-study/FHE";
+import CPETProjects from "layouts/pages/landing-pages/cpet-projects";
 
 const routes = [
   {
@@ -62,17 +62,10 @@ const routes = [
     component: <Members />, // 연결할 컴포넌트
   },
   {
-    name: "Field of study",
+    name: "Projects", // 메뉴에 표시될 이름
     icon: <Icon>book</Icon>,
-    description: "...",
-    dropdown: true,
-    collapse: [
-      {
-        name: "Fully Homomorphic Encryption", // 메뉴에 표시될 이름
-        route: "/pages/landing-pages/field-of-study/FHE", // 페이지 경로
-        component: <FHE />, // 연결할 컴포넌트
-      },
-    ],
+    route: "/pages/landing-pages/cpet-projects", // 페이지 경로
+    component: <CPETProjects />, // 연결할 컴포넌트
   },
   {
     name: "github",

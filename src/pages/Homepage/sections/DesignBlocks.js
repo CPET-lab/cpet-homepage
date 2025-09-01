@@ -1,24 +1,7 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// react-router-dom components
-import { Link } from "react-router-dom";
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -26,7 +9,7 @@ import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 
 // Homepage page components
-import ExampleCard from "pages/Homepage/components/ExampleCard";
+import ProjectItem from "pages/Homepage/components/ProjectItem";
 
 // Data
 import data from "pages/Homepage/sections/data/designBlocksData";
@@ -35,7 +18,7 @@ function DesignBlocks() {
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
-        <MKBox position="sticky" top="50px" pb={{ xs: 2, lg: 6 }}>
+        <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {title}
           </MKTypography>
@@ -45,15 +28,19 @@ function DesignBlocks() {
         </MKBox>
       </Grid>
       <Grid item xs={12} lg={9}>
-        <Grid container spacing={3}>
-          {items.map(({ image, name, count, route, pro }) => (
-            <Grid item xs={12} md={4} sx={{ mb: 2 }} key={name}>
-              <Link to={pro ? "/" : route}>
-                <ExampleCard image={image} name={name} count={count} pro={pro} />
-              </Link>
-            </Grid>
+        {/* ======== [수정] 아래 Stack에 sx 속성을 추가하여 스크롤 기능을 구현 ======== */}
+        <Stack
+          spacing={2}
+          sx={{
+            maxHeight: "350px", // 이 값을 조절하여 스크롤이 생기기 시작하는 최대 높이를 설정
+            overflowY: "auto", // 내용이 maxHeight를 넘으면 자동으로 수직 스크롤바 생성
+            pr: 2, // 스크롤바가 생길 때 내용과 겹치지 않도록 오른쪽에 약간의 여백을 줌
+          }}
+        >
+          {items.map(({ icon, name, route }) => (
+            <ProjectItem key={name} icon={icon} title={name} route={route} />
           ))}
-        </Grid>
+        </Stack>
       </Grid>
     </Grid>
   ));
@@ -73,13 +60,12 @@ function DesignBlocks() {
           <MKBadge
             variant="contained"
             color="info"
-            badgeContent="Information"
+            badgeContent="Research"
             container
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Lab Introduction <br />
-            &nbsp;
+            Projects
           </MKTypography>
         </Grid>
       </Container>
