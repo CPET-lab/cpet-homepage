@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/cpet-homepage/static/js/main.fb68fa10.js",
+    "main.js": "/cpet-homepage/static/js/main.0d1b7be2.js",
     "static/media/ju-hyeok-choi.jpeg": "/cpet-homepage/static/media/ju-hyeok-choi.b2db29acd473f525509b.jpeg",
     "static/media/mingikim.png": "/cpet-homepage/static/media/mingikim.4788cb9a3e5d5ad9de33.png",
     "static/media/anonymous.png": "/cpet-homepage/static/media/anonymous.a6a4b67042439c6153b4.png",
@@ -13,9 +13,9 @@
     "static/media/professor.png": "/cpet-homepage/static/media/professor.26b67dcc0be8e54f406f.png",
     "static/media/young-ho.jpeg": "/cpet-homepage/static/media/young-ho.08c4a708dcf5b259dd6b.jpeg",
     "index.html": "/cpet-homepage/index.html",
-    "main.fb68fa10.js.map": "/cpet-homepage/static/js/main.fb68fa10.js.map"
+    "main.0d1b7be2.js.map": "/cpet-homepage/static/js/main.0d1b7be2.js.map"
   },
   "entrypoints": [
-    "static/js/main.fb68fa10.js"
+    "static/js/main.0d1b7be2.js"
   ]
 }
