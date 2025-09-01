@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.js": "/cpet-homepage/static/js/main.0d1b7be2.js",
+    "main.js": "/cpet-homepage/static/js/main.cf9314cf.js",
     "static/media/ju-hyeok-choi.jpeg": "/cpet-homepage/static/media/ju-hyeok-choi.b2db29acd473f525509b.jpeg",
     "static/media/mingikim.png": "/cpet-homepage/static/media/mingikim.4788cb9a3e5d5ad9de33.png",
     "static/media/anonymous.png": "/cpet-homepage/static/media/anonymous.a6a4b67042439c6153b4.png",
-    "static/media/macbook.png": "/cpet-homepage/static/media/macbook.e0a8c5d5cc02d71b6d86.png",
     "static/media/junghun_moon.png": "/cpet-homepage/static/media/junghun_moon.c6eddcaace56bf287c9b.png",
-    "static/media/FuzzyPSI.png": "/cpet-homepage/static/media/FuzzyPSI.85e913fc977ce0c83d1f.png",
     "static/media/FHE.png": "/cpet-homepage/static/media/FHE.310099d197fd50bba601.png",
     "static/media/jungbin.jpeg": "/cpet-homepage/static/media/jungbin.841064d4b3a4a5f87f8e.jpeg",
     "static/media/homepage.jpeg": "/cpet-homepage/static/media/homepage.2c43843cdd7f336dae21.jpeg",
     "static/media/professor.png": "/cpet-homepage/static/media/professor.26b67dcc0be8e54f406f.png",
     "static/media/young-ho.jpeg": "/cpet-homepage/static/media/young-ho.08c4a708dcf5b259dd6b.jpeg",
     "index.html": "/cpet-homepage/index.html",
-    "main.0d1b7be2.js.map": "/cpet-homepage/static/js/main.0d1b7be2.js.map"
+    "main.cf9314cf.js.map": "/cpet-homepage/static/js/main.cf9314cf.js.map"
   },
   "entrypoints": [
-    "static/js/main.0d1b7be2.js"
+    "static/js/main.cf9314cf.js"
   ]
 }
