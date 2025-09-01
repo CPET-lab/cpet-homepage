@@ -21,8 +21,10 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import ProfessorImage from "assets/images/professor.png";
 
-// ======== 논문 정보를 배열 데이터로 분리합니다. ========
+// ======== 논문 정보를 배열 데이터로 분리 ========
+// 논문 추가할 때 이 부분만 수정하면 됨
 const publicationsData = [
+  //conference
   {
     title:
       "MHz2k: MPC from HE over ℤ₂ᴷ with New Packing, Simpler Reshare, and Better ZKP (CRYPTO 2021)",
@@ -38,6 +40,74 @@ const publicationsData = [
     title: "Flexible and Efficient Verifiable Computation on Encrypted Data (PKC 2021)",
     authors: "Alexandre Bois, Ignacio Cascudo, Dario Fiore, Dongwoo Kim",
     link: "https://rd.springer.com/chapter/10.1007%2F978-3-030-75248-4_19",
+  },
+  {
+    title: "Efficient Homomorphic Comparison Methods with Optimal Complexity (ASIACRYPT 2020)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim",
+    link: "https://rd.springer.com/chapter/10.1007/978-3-030-64834-3_8",
+  },
+  {
+    title: "Authenticated Computation of Control Signal from Dynamic Controllers (CDC 2020)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Junsoo Kim, Seungbeom Lee, Hyungbo Shim",
+    link: "https://ieeexplore.ieee.org/abstract/document/9304150",
+  },
+  {
+    title: "Numerical Methods for Comparison on Homomorphically Encrypted Numbers (ASIACRYPT 2019)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Hun Hee Lee, Keewoo Lee",
+    link: "https://link.springer.com/chapter/10.1007/978-3-030-34621-8_15",
+  },
+  {
+    title: "Numerical Methods for Comparison on Homomorphically Encrypted Numbers (ASIACRYPT 2019)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Hun Hee Lee, Keewoo Lee",
+    link: "https://link.springer.com/chapter/10.1007/978-3-030-34621-8_15",
+  },
+  {
+    title: "Reusable Fuzzy Extractor with Practical Storage Size (ACISP 2018)",
+    authors: "Jung Hee Cheon, Jinhyuck Jeong, Dongwoo Kim, Jongchan Lee",
+    link: "https://link.springer.com/chapter/10.1007/978-3-319-93638-3_3",
+  },
+  // 아래는 journal
+  {
+    title:
+      "Amortized efficient zk-SNARK from linear-only RLWE encodings (Journal of Communications and Networks, 1-14 (2023))",
+    authors: "Heewon Chung, Dongwoo Kim, Jeong Han Kim, Jiseung Kim",
+    link: "https://doi.org/10.23919/JCN.2023.000012",
+  },
+  {
+    title:
+      "Optimized Privacy-Preserving CNN Inference With Fully Homomorphic Encryption (IEEE Transactions on Information Forensics and Security 18, 2175-2187 (2023))",
+    authors: "*Dongwoo Kim, Cyril Guyot",
+    link: "https://doi.org/10.1109/TIFS.2023.3263631",
+  },
+  {
+    title: "Interactive Proof for Rounding Arithmetic (IEEE ACCESS 10, 122706-122725 (2022))",
+    authors: "Shuo Chen, Jung Hee Cheon, Dongwoo Kim, Daejun Park",
+    link: "https://doi.org/10.1109/ACCESS.2022.3223136",
+  },
+  {
+    title:
+      "Comparison of encrypted control approaches and tutorial on dynamic systems using Learning With Errors-based homomorphic encryption (Annual Reviews in Control 54, 200-218 (2022))",
+    authors:
+      "*Junsoo Kim, Dongwoo Kim, Yongsoo Song, Hyungbo Shim, Henrik Sandberg, Karl H. Johansson",
+    link: "https://doi.org/10.1016/j.arcontrol.2022.10.002",
+  },
+  {
+    title:
+      "On the Scaled Inverse of (xⁱ-xʲ) modulo Cyclotomic Polynomial of the form Φpˢ(x) or Φpˢqˢ(x) (J. Korean Math. Soc. 59 (3), 621–634 (2022))",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Keewoo Lee",
+    link: "http://jkms.kms.or.kr/journal/view.html?doi=10.4134/JKMS.j210446",
+  },
+  {
+    title:
+      "Efficient verifiable computation over quotient polynomial rings (Int. J. Inf. Secur. 21, 953–971 (2022))",
+    authors: "*Jai Hyun Park, Jung Hee Cheon, Dongwoo Kim",
+    link: "https://doi.org/10.1007/s10207-022-00590-x",
+  },
+  {
+    title:
+      "Privacy-preserving approximate GWAS computation based on homomorphic encryption (BMC Medical Genomics 13, 77 (2020))",
+    authors: "*Duhyeong Kim, Yongha Son, Dongwoo Kim, Andrey Kim, Seungwan Hong, Jung Hee Cheon",
+    link: "https://bmcmedgenomics.biomedcentral.com/articles/10.1186/s12920-020-0722-1",
   },
 ];
 
