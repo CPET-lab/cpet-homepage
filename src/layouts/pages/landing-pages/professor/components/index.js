@@ -13,7 +13,6 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
@@ -22,11 +21,31 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import ProfessorImage from "assets/images/professor.png";
 
+// ======== 논문 정보를 배열 데이터로 분리합니다. ========
+const publicationsData = [
+  {
+    title:
+      "MHz2k: MPC from HE over ℤ₂ᴷ with New Packing, Simpler Reshare, and Better ZKP (CRYPTO 2021)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Keewoo Lee",
+    link: "https://rd.springer.com/chapter/10.1007/978-3-030-84245-1_15",
+  },
+  {
+    title: "Lattice-based Secure Biometric Authentication for Hamming Distance (ACISP 2021)",
+    authors: "Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Joohee Lee, Junbum Shin, Yongsoo Song",
+    link: "https://link.springer.com/chapter/10.1007/978-3-030-90567-5_33",
+  },
+  {
+    title: "Flexible and Efficient Verifiable Computation on Encrypted Data (PKC 2021)",
+    authors: "Alexandre Bois, Ignacio Cascudo, Dario Fiore, Dongwoo Kim",
+    link: "https://rd.springer.com/chapter/10.1007%2F978-3-030-75248-4_19",
+  },
+];
+
 function Professor() {
   return (
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
       <Container>
-        {/* ======== [수정 1] alignItems="center"를 "flex-start"로 변경 ======== */}
+        {/* ======== 메인 Grid 컨테이너 ======== */}
         <Grid container alignItems="flex-start" justifyContent="space-between">
           {/* --- 교수님 정보 컬럼 (왼쪽) --- */}
           <Grid item xs={12} lg={5} sx={{ textAlign: "center" }}>
@@ -37,6 +56,9 @@ function Professor() {
               width="60%"
               sx={{ mb: 2, borderRadius: 2, mx: "auto" }}
             />
+
+            {/* ======== 교수님 사진 및 정보 기입 부분 ======== */}
+
             <MKTypography variant="h4" my={1} sx={{ pb: 2 }}>
               Dongwoo Kim
             </MKTypography>
@@ -79,122 +101,70 @@ function Professor() {
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
+
+          {/* --- 논문 목록 컬럼 (오른쪽) --- */}
           <Grid
             item
             xs={12}
             lg={6}
+            // ======== [핵심 수정] marginLeft를 음수 값으로 설정하여 왼쪽으로 당깁니다. ========
+            // 이 값을 조절하여 원하는 만큼 왼쪽으로 이동시킬 수 있습니다.
             sx={{
               mt: { xs: 6, lg: 0 },
-              maxHeight: "500px", // 이 값을 조절하여 스크롤이 시작되는 최대 높이를 설정
-              overflowY: "auto", // 내용이 maxHeight를 넘으면 자동으로 수직 스크롤바 생성
+              maxHeight: "500px",
+              overflowY: "auto",
+              // 이 값이 오른쪽 컬럼을 왼쪽으로 당기는 역할을 합니다.
+              // 'px' 대신 'rem'이나 '%', 'vw' 등 다른 단위도 사용 가능합니다.
+              marginLeft: { lg: "-20px" }, // 데스크탑(lg) 이상에서만 적용
             }}
           >
             <Stack>
-              <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
+              {/* ======== 분리된 논문 데이터를 map 함수를 통해 동적으로 렌더링합니다. ======== */}
+              {publicationsData.map((publication) => (
                 <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
+                  key={publication.title}
                   display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
+                  alignItems="flex-start"
+                  p={2}
+                  sx={{ pb: 3 }}
                 >
-                  <Icon fontSize="small">article</Icon>
-                </MKBox>
-                <MKTypography
-                  variant="body2"
-                  color="text"
-                  pl={2}
-                  component="a"
-                  href="https://rd.springer.com/chapter/10.1007/978-3-030-84245-1_15"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <strong>
-                    MHz2k: MPC from HE over ℤ₂ᴷ with New Packing, Simpler Reshare,
+                  <MKBox
+                    width="3rem"
+                    height="3rem"
+                    variant="gradient"
+                    bgColor="info"
+                    color="white"
+                    coloredShadow="info"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    borderRadius="xl"
+                    sx={{ flexShrink: 0 }}
+                  >
+                    <Icon fontSize="small">article</Icon>
+                  </MKBox>
+                  <MKTypography
+                    variant="body2"
+                    color="text"
+                    pl={2}
+                    component="a"
+                    href={publication.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <strong>
+                      {publication.title.split("<br />").map((line, index, arr) => (
+                        <span key={line}>
+                          {line}
+                          {index < arr.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </strong>
                     <br />
-                    and Better ZKP (CRYPTO 2021)
-                  </strong>
-                  <br />
-                  Jung Hee Cheon, Dongwoo Kim, Keewoo Lee
-                </MKTypography>
-              </MKBox>
-
-              <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">article</Icon>
+                    {publication.authors}
+                  </MKTypography>
                 </MKBox>
-                <MKTypography
-                  variant="body2"
-                  color="text"
-                  pl={2}
-                  component="a"
-                  href="https://link.springer.com/chapter/10.1007/978-3-030-90567-5_33"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <strong>
-                    Lattice-based Secure Biometric Authentication for
-                    <br />
-                    Hamming Distance (ACISP 2021)
-                  </strong>
-                  <br />
-                  Jung Hee Cheon, Dongwoo Kim, Duhyeong Kim, Joohee Lee,
-                  <br />
-                  Junbum Shin, Yongsoo Song
-                </MKTypography>
-              </MKBox>
-
-              <MKBox display="flex" alignItems="center" p={2} sx={{ pb: 3 }}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">article</Icon>
-                </MKBox>
-                <MKTypography
-                  variant="body2"
-                  color="text"
-                  pl={2}
-                  component="a"
-                  href="https://rd.springer.com/chapter/10.1007%2F978-3-030-75248-4_19"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <strong>
-                    Flexible and Efficient Verifiable Computation on
-                    <br />
-                    Encrypted Data (PKC 2021)
-                  </strong>
-                  <br />
-                  Alexandre Bois, Ignacio Cascudo, Dario Fiore,
-                  <br />
-                  Dongwoo Kim
-                </MKTypography>
-              </MKBox>
+              ))}
             </Stack>
           </Grid>
         </Grid>

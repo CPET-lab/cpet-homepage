@@ -21,6 +21,7 @@ function MemberCard({ image, name, position, publications }) {
         alignItems="center"
         justifyContent="center"
         borderRadius="lg"
+        sx={{ flexShrink: 0 }}
       >
         <Icon fontSize="small">article</Icon>
       </MKBox>
